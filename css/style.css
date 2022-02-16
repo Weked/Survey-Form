@@ -1,0 +1,37 @@
+body{
+    /*Define o tipo de fonte utilizada ao longo de todo o documento*/
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    /*color: #fff;*/
+}
+
+span{
+    font-size: 14px;
+}
+
+label, input, p, textarea, button{
+    display: block;
+}
+
+label{
+    padding-bottom: 10px;
+}
+
+.form-group{
+    padding-top: 20px;
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+#survey-form{
+    /*Atribui uma borda ao formulariom, com um leve arredondamento*/
+    border: 2px solid #333333;
+    border-radius: 5px;
+    /*Adiciona um background baseado em uma cor, além de possuir uma transparência*/
+    background-color: rgba(43, 43, 74, 0.8);
+}
+.container{
+    /*Centraliza o formulario e o titulo, a margin para o top e bottom nao tem espacamento quanto que,
+    right e left são automatizados pelo tamanho da pagina*/
+    margin: 0 auto;
+    width: 700px;
+}
