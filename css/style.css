@@ -1,37 +1,119 @@
 body{
     /*Define o tipo de fonte utilizada ao longo de todo o documento*/
-    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-    /*color: #fff;*/
-}
-
-span{
-    font-size: 14px;
-}
-
-label, input, p, textarea, button{
-    display: block;
-}
-
-label{
-    padding-bottom: 10px;
-}
-
-.form-group{
-    padding-top: 20px;
-    padding-right: 2em;
-    padding-left: 2em;
-}
-
-#survey-form{
-    /*Atribui uma borda ao formulariom, com um leve arredondamento*/
-    border: 2px solid #333333;
-    border-radius: 5px;
-    /*Adiciona um background baseado em uma cor, além de possuir uma transparência*/
+    font-family: 'Poppins', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    color: #fff;
+    position: relative;
     background-color: rgba(43, 43, 74, 0.8);
 }
+
 .container{
     /*Centraliza o formulario e o titulo, a margin para o top e bottom nao tem espacamento quanto que,
     right e left são automatizados pelo tamanho da pagina*/
-    margin: 0 auto;
+    margin: 100px auto 0;
     width: 700px;
+    position: relative;
 }
+
+/*Inicio das definições de estilo do header*/
+.header{
+    /*Define o posicionamento do cabeçalho, paramentros de espacamento e margem*/
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0px 10px;
+}
+
+.header h1{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.header p{
+    font-size: 0.9em;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+/*Fim das definições de estilo do header*/
+
+/*Início das definições de estilo do formulario*/
+#survey-form{
+    /*Atribui uma borda levemente arredonda, com um background e espaçamento ao formulario*/
+    border-radius: 5px;
+    background-color: rgba(43, 43, 74, 0.8);
+    padding: 50px;
+    font-size: 1.2em;
+}
+
+.form-group{
+    /*cada parte de formulário é um conjuto de elementos, e essas suas definições*/
+    padding: 3px;
+    margin-bottom: 20px;
+}
+
+.form-group label, .form-group p{
+    /**/
+    margin-bottom: 10px;
+    display: block;
+    
+}
+
+.form-group label, .form-group p{
+    display: flex;
+    align-items: center;
+}
+
+span{
+     /*atribui um tamanho personalizado aos spans do formulario*/
+    font-size: 0.8em;
+}
+
+input, select{
+    /*Atribui aos inputs e selects estilos de espacamento e tamanho de font*/
+    padding: 3px 10px;
+    color: rgb(90, 90, 90);
+    font-size: 0.9em;
+}
+
+input[type="text"], input[type="number"], select{
+    /*Edita tamanhos e bordas dos inputs e selects*/
+    height: 40px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+input[type="text"], input[type="number"], select, textarea{
+    width: 100%;
+    color: rgb(90, 90, 90);
+    box-sizing: border-box;
+}
+
+input[type="radio"], input[type="checkbox"]{
+    /*modifica os atributos de tamanho dos checkbox e radio buttons*/
+    width: 20px;
+    height: 20px;
+    margin: 0px 5px 0px 0px;
+    box-sizing: border-box;
+}
+
+textarea{
+    height: 100px;
+    resize: vertical; /*Permite o resize apenas no eixo vertical*/
+    color: rgb(90, 90, 90);
+    font-style: normal;
+    font-size: 1.2em;
+    text-indent: 9px;
+    box-sizing: border-box;
+}
+
+button{
+    /*Edita as configurações do button, tamanho, borda e cor*/
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    background-color: rgb(60, 160, 60);
+    border-radius: 2px;
+    border-style: none;
+    box-sizing: border-box;
+}
+/*Fim das definições de estilo do formulario*/
