@@ -1,38 +1,52 @@
 <!--Weked A. Curvel [weked.curvel@gmail.com]-->
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"><!--Define o liguagem do documento, utilizado pelos mecanismos de busca, como google-->
     <head>
-        <meta charset="UTF-8">
-        <title>Survey Form</title>
+        <!--Define o padrão de caracteres utilizados pelo navegador para renderizar o documento-->
+        <meta charset="UTF-8"><!--Utilizado para caracteres que possuem acentuação, e Ç. Utilizado para liguagens latinas-->
+        <!--Adiciona os arquivos de estilo da pagina-->
+        <link rel="stylesheet" href="./css/reset.css"><!--Reseta os estilos de todos os elementos do HTML-->
+        <link rel="stylesheet" href="./css/style.css"><!--Estiliza os elementos da pagina-->
+        <!--Define o titulo da pagina, e é apresentado no topo da guia do navegador-->
+        <title>Formulário de Pesquisa</title>
     </head>
     <body>
+        <!--Inicio do container que agrupa todos os elementos do formulario-->
         <div class="container">
+            <!--Inicio do header do foumulario-->
             <header class="header">
-                <!--Titulo utilizado no formulário-->
+                <!--Titulo para identificação do formulário no corpo da página-->
                 <h1 id="tittle" class="text-center">
-                    Survey Form
+                    Formulário de Pesquisa
                 </h1>
+                <!--Paragráfo que serve como complemento ao titulo do formulario-->
                 <p id="tittle-description" class="description text-center">
                     Um projeto voltado aos fundamentos do HTML e CSS
                 </p>
-                <!--tabela para organizar os inputs-->
             </header>
+            <!--Fim do header do formulario-->
+
+            <!--Inicio do formulário-->
             <form id="survey-form">
+                <!--Contém o label nome e o campo para inserção do nome, é obrigatório-->
                 <div class="form-group">
                     <label id="user_name_label" for="user_name">Nome</label>
                     <input type="text" name="user_name" id="user_name" class="form-control" placeholder="Digite seu nome" required>
                 </div>
+                <!--Contém o label email e o campo para inserção do email, é obrigatório-->
                 <div class="form-group">
                     <label id="user_email_label" for="user_email">Email</label>
                     <input type="text" name="user_email" id="user_email" class="form-control" placeholder="Digite seu email" required>
                 </div>
+                <!--Contém o label idade e o campo para inserção da idade utilizando um intervalo, não é obrigatório-->
                 <div class="form-group">
                     <label id="user_age_label" for="user_age">
-                        "Idade" 
+                        Idade
                         <span class="clue">(Opcional)</span>
                     </label>
                     <input type="number" name="user_age" id="user_age" min="10" max="99" class="form-control" placeholder="Idade">
                 </div>
+                <!--Contém o label para profissão e um menu de contexto para a seleção dentro de um lista, é obrigatório-->
                 <div class="form-group">
                     <label>
                         <p>Que opção define melhor sua profissão atual?</p>
@@ -46,21 +60,23 @@
                         <option value="other">Outros</option>
                     </select>
                 </div>
+                <!--Contém o label de recomendação e um conjunto de radio buttons para escolha da melhor opção-->
                 <div class="form-group">
                     <p>Você recomendaria este formulário para um amigo</p>
                     <label>
                         <input type="radio" name="user_recommend" class="input-radio" value="definitely" checked>
-                        "Definitivamente"
+                        Definitivamente
                     </label>
                     <label>
                         <input type="radio" name="user_recommend" class="input-radio" value="maybe">
-                        "Talvez"
+                        Talvez
                     </label>
                     <label>
                         <input type="radio" name="user_recommend" class="input-radio" value="not-sure">
-                        "Não tenho certeza"
+                        Não tenho certeza
                     </label>
                 </div>
+                <!--Contém o label nome e o campo para inserção do nome-->
                 <div class="form-group">
                     <label>
                         <p>Qual seu recurso favorito desse formulário?</p>
@@ -73,36 +89,41 @@
                         <option value="check-box">Check box</option>
                     </select>
                 </div>
+                <!--Contém o label para melhoria dos itens do formulario e um conjunto de checkbox para a escolha das melhores alternativas-->
                 <div class="form-group">
                     <p>
-                        "O que você gostaria que fosse melhorado?"
+                        Em que podemos melhorar?
                         <span>(Marque aqueles que se aplicam)</span>
                     </p>
                     <label>
                         <input type="checkbox" name="prefer" class="input-checkbox" value="text-field-input">
-                        "Entradas dos campos de texto"
+                        Entradas dos campos de texto
                     </label>
                     <label>
                         <input type="checkbox" name="prefer" class="input-checkbox" value="radio-button-input">
-                        "Entradas dos radio buttons"
+                        Entradas dos radio buttons
                     </label>
                     <label>
                         <input type="checkbox" name="prefer" class="input-checkbox" value="list-select-input">
-                        "Entradas das listas de seleção"
+                        Entradas das listas de seleção
                     </label>
                     <label>
                         <input type="checkbox" name="prefer" class="input-checkbox" value="check-box-input">
-                        "Entradas dos check box"
+                        Entradas dos checkbox
                     </label>
-                    <div class="form-group">
-                        <p>Você tem algum comentário ou sugestão?</p>
-                        <textarea id="comments" name="comment" class="input-textarea" placeholder="Digite seu comentário aqui..."></textarea>
-                    </div>
                 </div>
+                <!--Contém o label para sugestões e o campo para inserção dos comentarios e sugestões do usuário-->
+                <div class="form-group">
+                    <p>Você tem algum comentário ou sugestão?</p>
+                    <textarea id="comments" name="comment" class="input-textarea" placeholder="Digite seu comentário aqui..."></textarea>
+                </div>
+                <!--Contém o button para efetuar o submit do formulário após preenchimento-->
                 <div class="form-group">
                     <button type="submit" id="submit" class="submit-button"> Enviar </button>
                 </div>
             </form>
+            <!--Fim do formulário-->
         </div>
+        <!--Fim do container que agrupa todos os elementos do formulario-->
     </body>
 </html>
